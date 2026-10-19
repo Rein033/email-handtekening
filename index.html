@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-mailhandtekening</title>
+<meta name="description" content="Maak een nette e-mailhandtekening met naam, functie, foto, logo en contactgegevens. Kies een stijl en kleur, en plak hem direct in Outlook, Gmail of Apple Mail.">
+<meta property="og:title" content="E-mailhandtekening">
+<meta property="og:description" content="Maak een nette e-mailhandtekening met naam, functie, foto, logo en contactgegevens. Kies een stijl en kleur, en plak hem direct in Outlook, Gmail of Apple Mail.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' rx='7' fill='%2303a9f4'/%3E%3Crect x='9' y='10' width='14' height='3' rx='1.5' fill='%23fff'/%3E%3Crect x='9' y='15' width='10' height='3' rx='1.5' fill='%23fff' opacity='.7'/%3E%3Crect x='9' y='20' width='12' height='3' rx='1.5' fill='%23fff' opacity='.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="base.css?v=1">
+<link rel="stylesheet" href="style.css?v=1">
+
+<script defer src="https://analytics.uselesssite.nl/script.js" data-website-id="c8741679-5df2-4679-9527-39cc9edc25c0"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./"><span class="logo"><i class="mdi mdi-email-edit-outline"></i></span>
+    <div><b>E-mailhandtekening</b><small>Nette handtekening voor Outlook en Gmail</small></div></a>
+  <nav>
+    <button type="button" class="ib" id="theme" title="Licht / donker"><i class="mdi mdi-theme-light-dark"></i></button>
+    <a href="https://uselesssite.nl/tools/" class="ghost"><i class="mdi mdi-view-grid-outline"></i> <span>Alle tools</span></a>
+    <a href="https://github.com/Rein033/email-handtekening" class="ghost"><i class="mdi mdi-github"></i> <span>GitHub</span></a>
+    <a href="https://buymeacoffee.com/rein033" class="coffee" target="_blank" rel="noopener"><i class="mdi mdi-coffee"></i> <span>Koffie</span></a>
+  </nav>
+</header>
+
+<main>
+<div class="cols">
+  <div>
+    <div class="panel">
+      <div class="tile-head"><div class="tile-ic"><i class="mdi mdi-account-tie"></i></div><div class="tile-txt"><b>Jouw gegevens</b><small>Lege velden komen niet in de handtekening</small></div></div>
+      <div class="form" id="velden"></div>
+    </div>
+    <div class="panel">
+      <div class="tile-head"><div class="tile-ic"><i class="mdi mdi-palette"></i></div><div class="tile-txt"><b>Stijl</b><small>Hoe de handtekening eruitziet</small></div></div>
+      <div class="seg" id="stijl"><button type="button" data-v="modern">Modern</button><button type="button" data-v="klassiek">Klassiek</button><button type="button" data-v="minimaal">Minimaal</button></div>
+      <div class="colors" id="kleuren" style="margin-top:12px"></div>
+      <div class="btns" style="margin-top:12px">
+        <label class="tog"><input type="checkbox" id="fotorond"><span></span> Foto rond</label>
+        <label class="tog"><input type="checkbox" id="iconen"><span></span> Tekst in plaats van iconen (T: / E:)</label>
+      </div>
+    </div>
+  </div>
+  <div class="panel sticky">
+    <div class="tile-head"><div class="tile-ic"><i class="mdi mdi-eye"></i></div><div class="tile-txt"><b>Voorbeeld</b><small>Zo ziet de ontvanger hem</small></div></div>
+    <div class="mail"><div class="mailtop"><span></span><span></span><span></span></div><div class="mailbody"><p>Met vriendelijke groet,</p><div id="sig"></div></div></div>
+    <div class="btns" style="margin-top:12px">
+      <button type="button" class="main" id="copyrich"><i class="mdi mdi-content-copy"></i> Kopieer handtekening</button>
+      <button type="button" class="small" id="copyhtml"><i class="mdi mdi-code-tags"></i> Kopieer HTML</button>
+      <button type="button" class="small" id="dl"><i class="mdi mdi-download"></i> Download .htm</button>
+      <button type="button" class="small" id="wis"><i class="mdi mdi-delete-outline"></i> Wissen</button>
+    </div>
+    <details class="how"><summary>Zo zet je hem in je mailprogramma</summary>
+      <p><b>Outlook (nieuw / web):</b> Instellingen → Account → Handtekeningen → Nieuwe handtekening → plakken (Ctrl+V).</p>
+      <p><b>Outlook (klassiek):</b> Bestand → Opties → E-mail → Handtekeningen → Nieuw → plakken.</p>
+      <p><b>Gmail:</b> Instellingen (tandwiel) → Alle instellingen bekijken → Handtekening → Nieuwe maken → plakken → onderaan Wijzigingen opslaan.</p>
+      <p><b>Apple Mail:</b> Instellingen → Handtekeningen → + → plakken. Zet "Gebruik altijd mijn standaardlettertype" uit.</p>
+      <p>Foto en logo moeten een openbare link zijn (bijv. van je website of LinkedIn), anders ziet de ontvanger ze niet.</p>
+    </details>
+  </div>
+</div>
+</main>
+
+<footer>
+  Gratis en open source · Gemaakt door <a href="https://github.com/Rein033">Rein033</a> · Alles gebeurt in je browser, er gaat niets naar een server ·
+  <a href="https://uselesssite.nl/tools/">Meer tools</a>
+</footer>
+<script src="base.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>

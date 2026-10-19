@@ -1,0 +1,10 @@
+.sticky { position: sticky; top: 80px; }
+@media (max-width: 900px) { .sticky { position: static; } }
+.mail { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; color: #222; }
+.mailtop { display: flex; gap: 6px; padding: 9px 12px; background: #eceff3; } .mailtop span { width: 10px; height: 10px; border-radius: 50%; background: #c9ced6; }
+.mailbody { padding: 18px 20px 22px; font: 14px/1.5 Arial, sans-serif; overflow-x: auto; } .mailbody > p { margin: 0 0 14px; }
+.colors { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.sw { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--panel); cursor: pointer; padding: 0; box-shadow: 0 0 0 1px var(--line); }
+.sw.sel { box-shadow: 0 0 0 2px var(--accent); }
+.colors input[type=color] { width: 30px; height: 30px; border: 0; padding: 0; background: none; cursor: pointer; }
+.how { margin-top: 14px; color: var(--muted); font-size: .9rem; } .how summary { cursor: pointer; font-weight: 600; color: var(--fg); } .how p { margin: 6px 0; }
